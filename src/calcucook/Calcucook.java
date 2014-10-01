@@ -1,29 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package calcucook;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
-/**
- *
- * @author josh
- */
 public class Calcucook {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         //vars
         Scanner input = new Scanner(System.in);
         ArrayList<Food> fooditems = new ArrayList<>();
-        
-        
+                
         System.out.println("How many food items are you cooking?");
         int i = input.nextInt();
         
@@ -45,7 +33,6 @@ public class Calcucook {
         
         //sorts objects based on longest cooking time
         Collections.sort(fooditems, new FoodTimeComparator());
-        
         
         //get(0) is largest cooking time
         //sets the delay for putting on the even and outputs it to user
